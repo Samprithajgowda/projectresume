@@ -38,10 +38,11 @@ How to Run
 Contact
 
 Email: samprithajgowda@gmail.com LinkedIn:
-linkedin.com/sampritha-j-gowda GitHub: github.com/Samprithajgowda
+https://www.linkedin.com/in/sampritha-j-gowda-925b472a1/ GitHub: https://github.com/Samprithajgowda
 
 Future Improvements
 
 -   Dark mode toggle
 -   Background animations
 -   Full mobile responsiveness
+
