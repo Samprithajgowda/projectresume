@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+</head>
+<body>
+
+<div class="infographic-container">
+
+    <!-- Center Image -->
+    <div class="center-circle">
+        <img src="{% static 'blog/image.png' %}" alt="Profile">
+    </div>
+
+    <!-- Work Experience -->
+<div class="info-box work">
+    <h3>About_Me</h3>
+    <p class="typing" data-text="I’m Sampritha J Gowda, an engineering student with a strong interest in software development and data analytics. I enjoy solving problems, learning new technologies, and building practical solutions that strengthen my technical skills. I’m continuously working toward becoming a skilled and industry-ready software engineer."></p>
+</div>
+
+<!-- Education -->
+<div class="info-box education">
+    <h3>Education</h3>
+    <p class="typing" data-text="Currenty Persuing 3rd year Engineering in Alvas Institute of Engineering Technology"></p>
+</div>
+
+<!-- Skills -->
+<div class="info-box skills">
+    <h3>Skills</h3>
+    <p class="typing" data-text="• Python • HTML • CSS • SQL • Django "></p>
+</div>
+
+<!-- Achievements -->
+<div class="info-box achievements">
+    <h3>Achievements</h3>
+    <p class="typing" data-text="• Participated in Hackathons • Data Analytics – Qwiklabs | Software Engineering – Coursera"></p>
+</div>
+
+<!-- Personal Profile -->
+<div class="info-box profile">
+    <h3>Personal Profile</h3>
+    <p class="typing" data-text="Engineering student focused on problem-solving, software development, and continuous learning. Strong in fundamentals and driven to build impactful technology solutions."></p>
+</div>
+
+<!-- Contact -->
+<div class="info-box contact">
+    <h3>Contact</h3>
+    <p class="typing" data-text="samprithajgowda@gmail.com • linkedin.com/sampritha-j-gowda • github.com/Samprithajgowda"></p>
+</div>
+
+</div>
+<script>
+const boxes = document.querySelectorAll(".info-box");
+
+boxes.forEach(box => {
+    const textElement = box.querySelector(".typing");
+    const text = textElement.getAttribute("data-text");
+
+    box.addEventListener("mouseenter", () => {
+        textElement.textContent = "";
+        let i = 0;
+
+        function type() {
+            if (i < text.length) {
+                textElement.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, 35);
+            }
+        }
+
+        type();
+    });
+
+    box.addEventListener("mouseleave", () => {
+        textElement.textContent = "";
+    });
+});
+</script>
+</body>
+</html>
